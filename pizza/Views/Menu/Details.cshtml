@@ -1,0 +1,24 @@
+﻿@model pizza.Models.Dish
+@{
+    ViewData["Title"]="Details";
+}
+
+<div  class=" container">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="@Model.ImageUrl" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+            <div class="">
+                <ul>
+                    @foreach (var items in Model.DishIngredient)
+                    {
+                        <il>
+                            @items.Ingredient.Name
+                        </il>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
